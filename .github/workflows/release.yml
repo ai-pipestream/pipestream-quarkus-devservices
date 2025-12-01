@@ -102,7 +102,7 @@ jobs:
           GPG_SIGNING_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Publish release to GitHub Packages
-        run: ./gradlew publish --no-daemon
+        run: ./gradlew publishAllPublicationsToGitHubPackagesRepository --no-daemon
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GPG_SIGNING_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
